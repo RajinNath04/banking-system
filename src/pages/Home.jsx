@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../assets/Home.css";
 import Account from "../components/Account";
 import Users from "../components/Users";
@@ -7,6 +8,7 @@ import Transactions from "../components/Transactions";
 const Home = () => {
   const [tab, setTab] = useState("Account");
   const [tabActive, setTabActive] = useState(0);
+  const navigate = useNavigate();
 
   const tabList = [
     { id: 1, name: "Account" },
@@ -19,7 +21,10 @@ const Home = () => {
     setTab(tabList[index].name);
   };
 
-  const logout = () => {};
+  const logout = () => {
+    localStorage.clear();
+    navigate("/", { replace: true });
+  };
 
   return (
     <div className="dashboard">
