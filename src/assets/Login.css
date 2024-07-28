@@ -1,3 +1,10 @@
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
 .login-container {
     background-color: #fff;
     padding: 20px;
@@ -11,6 +18,24 @@
     margin-bottom: 20px;
     color: #333;
 }
+
+.password-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .eye-icon i {
+    font-size: 18px;
+  }
 
 .input-container {
     margin-bottom: 15px;
