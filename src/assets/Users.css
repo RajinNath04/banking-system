@@ -1,0 +1,13 @@
+.visually-hidden {
+    display: none;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

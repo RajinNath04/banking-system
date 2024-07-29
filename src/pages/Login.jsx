@@ -33,6 +33,10 @@ const Login = () => {
     setShowPassword(!showPassword);
   };
 
+  const handleRegister = () => {
+    navigate("/register", { replace: true });
+  };
+
   return (
     <div className="login-section">
       <div className="login-container">
@@ -73,6 +77,18 @@ const Login = () => {
           {error && <p style={{ color: "red" }}>{error}</p>}
           {isLoggedIn && <p>Welcome, {email}!</p>}
         </form>
+        <hr
+          style={{
+            height: "2px",
+            borderWidth: "0",
+            color: "gray",
+            backgroundColor: "gray",
+            marginTop: "20px",
+          }}
+        ></hr>
+        <button type="button" onClick={handleRegister}>
+          Register
+        </button>
       </div>
     </div>
   );

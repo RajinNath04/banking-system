@@ -1,0 +1,169 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "bankAccount": {
+          "accountNumber": "1234567890",
+          "routingNumber": "111000025",
+          "accountType": "Checking",
+          "balance": 1000.50
+        }
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "bankAccount": {
+          "accountNumber": "9876543210",
+          "routingNumber": "222000026",
+          "accountType": "Savings",
+          "balance": 5000.00
+        }
+      },
+      {
+        "id": 3,
+        "name": "Bob Johnson",
+        "email": "bob.johnson@example.com",
+        "bankAccount": {
+          "accountNumber": "5555555555",
+          "routingNumber": "333000027",
+          "accountType": "Checking",
+          "balance": 2500.00
+        }
+      },
+      {
+        "id": 4,
+        "name": "Alice Brown",
+        "email": "alice.brown@example.com",
+        "bankAccount": {
+          "accountNumber": "4444444444",
+          "routingNumber": "444000028",
+          "accountType": "Savings",
+          "balance": 10000.00
+        }
+      },
+      {
+        "id": 5,
+        "name": "Mike Davis",
+        "email": "mike.davis@example.com",
+        "bankAccount": {
+          "accountNumber": "6666666666",
+          "routingNumber": "555000029",
+          "accountType": "Checking",
+          "balance": 500.00
+        }
+      },
+      {
+        "id": 6,
+        "name": "Emily Chen",
+        "email": "emily.chen@example.com",
+        "bankAccount": {
+          "accountNumber": "7777777777",
+          "routingNumber": "666000030",
+          "accountType": "Savings",
+          "balance": 2000.00
+        }
+      },
+      {
+        "id": 7,
+        "name": "Kevin White",
+        "email": "kevin.white@example.com",
+        "bankAccount": {
+          "accountNumber": "8888888888",
+          "routingNumber": "777000031",
+          "accountType": "Checking",
+          "balance": 1500.00
+        }
+      },
+      {
+        "id": 8,
+        "name": "Sarah Lee",
+        "email": "sarah.lee@example.com",
+        "bankAccount": {
+          "accountNumber": "9999999999",
+          "routingNumber": "888000032",
+          "accountType": "Savings",
+          "balance": 3000.00
+        }
+      },
+      {
+        "id": 9,
+        "name": "David Kim",
+        "email": "david.kim@example.com",
+        "bankAccount": {
+          "accountNumber": "1010101010",
+          "routingNumber": "999000033",
+          "accountType": "Checking",
+          "balance": 4000.00
+        }
+      },
+      {
+        "id": 10,
+        "name": "Lisa Nguyen",
+        "email": "lisa.nguyen@example.com",
+        "bankAccount": {
+          "accountNumber": "1212121212",
+          "routingNumber": "101000034",
+          "accountType": "Savings",
+          "balance": 6000.00
+        }
+      },
+      {
+        "id": 11,
+        "name": "Tom Harris",
+        "email": "tom.harris@example.com",
+        "bankAccount": {
+          "accountNumber": "1313131313",
+          "routingNumber": "121000035",
+          "accountType": "Checking",
+          "balance": 8000.00
+        }
+      },
+      {
+        "id": 12,
+        "name": "Rachel Patel",
+        "email": "rachel.patel@example.com",
+        "bankAccount": {
+          "accountNumber": "1414141414",
+          "routingNumber": "131000036",
+          "accountType": "Savings",
+          "balance": 9000.00
+        }
+      },
+      {
+        "id": 13,
+        "name": "Chris Martin",
+        "email": "chris.martin@example.com",
+        "bankAccount": {
+          "accountNumber": "1515151515",
+          "routingNumber": "141000037",
+          "accountType": "Checking",
+          "balance": 10000.00
+        }
+      },
+      {
+        "id": 14,
+        "name": "Jessica Garcia",
+        "email": "jessica.garcia@example.com",
+        "bankAccount": {
+          "accountNumber": "1616161616",
+          "routingNumber": "151000038",
+          "accountType": "Savings",
+          "balance": 11000.00
+        }
+      },
+      {
+        "id": 15,
+        "name": "Michael Rodriguez",
+        "email": "michael.rodriguez@example.com",
+        "bankAccount": {
+          "accountNumber": "1717171717",
+          "routingNumber": "161000039",
+          "accountType": "Checking",
+          "balance": 12000.00
+        }
+      }
+    ]
+  }
