@@ -1,5 +1,6 @@
 import React from 'react'
 import "../assets/Transactions.css";
+import Currency from "../data/Currency.json";
 
 const Transactions = () => {
   return (
@@ -59,6 +60,24 @@ const Transactions = () => {
               // onChange={(e) => setFilterValue(e.target.value)}
               placeholder="Enter Amount"
             />
+          </div>
+          <div>
+            <select
+              className="form-select mr-3"
+              aria-label="Default select example"
+              // onChange={(e) => setFilterSearch(e.target.value)}
+              defaultValue={""}
+              // value={filterSearch}
+            >
+              <option defaultValue={""} selected>
+                Select Currency
+              </option>
+              {Currency.currency.map((item, index) => (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
 
