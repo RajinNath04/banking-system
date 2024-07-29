@@ -2,6 +2,19 @@
     border: 1px solid lightgray;
 }
 
-.transaction-account-number {
-    text-align: center;
+.transaction-account {
+    font-size: 20px;
+    color: red;
+}
+
+.transaction-input-container, .transaction-button-section {
+    display: flex;
+}
+
+.transaction-input{
+    width: 300px;
+}
+
+.transaction-button {
+    width: 200px;
 }
