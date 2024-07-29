@@ -30,7 +30,7 @@ const Home = () => {
     <div className="dashboard">
       <nav className="navbar">
         <div className="logo">
-          <span>Banking System</span>
+          <h2>Banking System</h2>
         </div>
         <ul className="menu">
           <li>

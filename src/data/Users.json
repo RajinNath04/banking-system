@@ -1,169 +1,469 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "email": "john.doe@example.com",
-        "bankAccount": {
-          "accountNumber": "1234567890",
-          "routingNumber": "111000025",
-          "accountType": "Checking",
-          "balance": 1000.50
-        }
-      },
-      {
-        "id": 2,
-        "name": "Jane Smith",
-        "email": "jane.smith@example.com",
-        "bankAccount": {
-          "accountNumber": "9876543210",
-          "routingNumber": "222000026",
-          "accountType": "Savings",
-          "balance": 5000.00
-        }
-      },
-      {
-        "id": 3,
-        "name": "Bob Johnson",
-        "email": "bob.johnson@example.com",
-        "bankAccount": {
-          "accountNumber": "5555555555",
-          "routingNumber": "333000027",
-          "accountType": "Checking",
-          "balance": 2500.00
-        }
-      },
-      {
-        "id": 4,
-        "name": "Alice Brown",
-        "email": "alice.brown@example.com",
-        "bankAccount": {
-          "accountNumber": "4444444444",
-          "routingNumber": "444000028",
-          "accountType": "Savings",
-          "balance": 10000.00
-        }
-      },
-      {
-        "id": 5,
-        "name": "Mike Davis",
-        "email": "mike.davis@example.com",
-        "bankAccount": {
-          "accountNumber": "6666666666",
-          "routingNumber": "555000029",
-          "accountType": "Checking",
-          "balance": 500.00
-        }
-      },
-      {
-        "id": 6,
-        "name": "Emily Chen",
-        "email": "emily.chen@example.com",
-        "bankAccount": {
-          "accountNumber": "7777777777",
-          "routingNumber": "666000030",
-          "accountType": "Savings",
-          "balance": 2000.00
-        }
-      },
-      {
-        "id": 7,
-        "name": "Kevin White",
-        "email": "kevin.white@example.com",
-        "bankAccount": {
-          "accountNumber": "8888888888",
-          "routingNumber": "777000031",
-          "accountType": "Checking",
-          "balance": 1500.00
-        }
-      },
-      {
-        "id": 8,
-        "name": "Sarah Lee",
-        "email": "sarah.lee@example.com",
-        "bankAccount": {
-          "accountNumber": "9999999999",
-          "routingNumber": "888000032",
-          "accountType": "Savings",
-          "balance": 3000.00
-        }
-      },
-      {
-        "id": 9,
-        "name": "David Kim",
-        "email": "david.kim@example.com",
-        "bankAccount": {
-          "accountNumber": "1010101010",
-          "routingNumber": "999000033",
-          "accountType": "Checking",
-          "balance": 4000.00
-        }
-      },
-      {
-        "id": 10,
-        "name": "Lisa Nguyen",
-        "email": "lisa.nguyen@example.com",
-        "bankAccount": {
-          "accountNumber": "1212121212",
-          "routingNumber": "101000034",
-          "accountType": "Savings",
-          "balance": 6000.00
-        }
-      },
-      {
-        "id": 11,
-        "name": "Tom Harris",
-        "email": "tom.harris@example.com",
-        "bankAccount": {
-          "accountNumber": "1313131313",
-          "routingNumber": "121000035",
-          "accountType": "Checking",
-          "balance": 8000.00
-        }
-      },
-      {
-        "id": 12,
-        "name": "Rachel Patel",
-        "email": "rachel.patel@example.com",
-        "bankAccount": {
-          "accountNumber": "1414141414",
-          "routingNumber": "131000036",
-          "accountType": "Savings",
-          "balance": 9000.00
-        }
-      },
-      {
-        "id": 13,
-        "name": "Chris Martin",
-        "email": "chris.martin@example.com",
-        "bankAccount": {
-          "accountNumber": "1515151515",
-          "routingNumber": "141000037",
-          "accountType": "Checking",
-          "balance": 10000.00
-        }
-      },
-      {
-        "id": 14,
-        "name": "Jessica Garcia",
-        "email": "jessica.garcia@example.com",
-        "bankAccount": {
-          "accountNumber": "1616161616",
-          "routingNumber": "151000038",
-          "accountType": "Savings",
-          "balance": 11000.00
-        }
-      },
-      {
-        "id": 15,
-        "name": "Michael Rodriguez",
-        "email": "michael.rodriguez@example.com",
-        "bankAccount": {
-          "accountNumber": "1717171717",
-          "routingNumber": "161000039",
-          "accountType": "Checking",
-          "balance": 12000.00
-        }
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "bankAccount": {
+        "accountNumber": "1234567890",
+        "routingNumber": "111000025",
+        "accountType": "Checking",
+        "balance": 1000.50,
+        "transactions": [
+          {
+            "date": "2024-07-01",
+            "amount": -50.00,
+            "type": "debit",
+            "description": "Grocery Store"
+          },
+          {
+            "date": "2024-07-05",
+            "amount": 200.00,
+            "type": "credit",
+            "description": "Salary"
+          },
+          {
+            "date": "2024-07-10",
+            "amount": -30.00,
+            "type": "debit",
+            "description": "Restaurant"
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "bankAccount": {
+        "accountNumber": "9876543210",
+        "routingNumber": "222000026",
+        "accountType": "Savings",
+        "balance": 5000.00,
+        "transactions": [
+          {
+            "date": "2024-07-02",
+            "amount": -100.00,
+            "type": "debit",
+            "description": "Online Shopping"
+          },
+          {
+            "date": "2024-07-07",
+            "amount": 500.00,
+            "type": "credit",
+            "description": "Interest Payment"
+          },
+          {
+            "date": "2024-07-15",
+            "amount": -200.00,
+            "type": "debit",
+            "description": "Utility Bill"
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "email": "bob.johnson@example.com",
+      "bankAccount": {
+        "accountNumber": "5555555555",
+        "routingNumber": "333000027",
+        "accountType": "Checking",
+        "balance": 2500.00,
+        "transactions": [
+          {
+            "date": "2024-07-03",
+            "amount": -150.00,
+            "type": "debit",
+            "description": "Gym Membership"
+          },
+          {
+            "date": "2024-07-08",
+            "amount": 300.00,
+            "type": "credit",
+            "description": "Freelance Work"
+          },
+          {
+            "date": "2024-07-12",
+            "amount": -50.00,
+            "type": "debit",
+            "description": "Coffee Shop"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Alice Brown",
+      "email": "alice.brown@example.com",
+      "bankAccount": {
+        "accountNumber": "4444444444",
+        "routingNumber": "444000028",
+        "accountType": "Savings",
+        "balance": 10000.00,
+        "transactions": [
+          {
+            "date": "2024-07-04",
+            "amount": -200.00,
+            "type": "debit",
+            "description": "Travel"
+          },
+          {
+            "date": "2024-07-09",
+            "amount": 1000.00,
+            "type": "credit",
+            "description": "Dividend"
+          },
+          {
+            "date": "2024-07-14",
+            "amount": -300.00,
+            "type": "debit",
+            "description": "Home Improvement"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Mike Davis",
+      "email": "mike.davis@example.com",
+      "bankAccount": {
+        "accountNumber": "6666666666",
+        "routingNumber": "555000029",
+        "accountType": "Checking",
+        "balance": 500.00,
+        "transactions": [
+          {
+            "date": "2024-07-05",
+            "amount": -20.00,
+            "type": "debit",
+            "description": "Fast Food"
+          },
+          {
+            "date": "2024-07-10",
+            "amount": 150.00,
+            "type": "credit",
+            "description": "Refund"
+          },
+          {
+            "date": "2024-07-12",
+            "amount": -25.00,
+            "type": "debit",
+            "description": "Gas"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Emily Chen",
+      "email": "emily.chen@example.com",
+      "bankAccount": {
+        "accountNumber": "7777777777",
+        "routingNumber": "666000030",
+        "accountType": "Savings",
+        "balance": 2000.00,
+        "transactions": [
+          {
+            "date": "2024-07-01",
+            "amount": -50.00,
+            "type": "debit",
+            "description": "Books"
+          },
+          {
+            "date": "2024-07-06",
+            "amount": 250.00,
+            "type": "credit",
+            "description": "Gift"
+          },
+          {
+            "date": "2024-07-11",
+            "amount": -75.00,
+            "type": "debit",
+            "description": "Streaming Service"
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Kevin White",
+      "email": "kevin.white@example.com",
+      "bankAccount": {
+        "accountNumber": "8888888888",
+        "routingNumber": "777000031",
+        "accountType": "Checking",
+        "balance": 1500.00,
+        "transactions": [
+          {
+            "date": "2024-07-02",
+            "amount": -60.00,
+            "type": "debit",
+            "description": "Books"
+          },
+          {
+            "date": "2024-07-07",
+            "amount": 400.00,
+            "type": "credit",
+            "description": "Freelance Project"
+          },
+          {
+            "date": "2024-07-13",
+            "amount": -100.00,
+            "type": "debit",
+            "description": "Concert Tickets"
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Sarah Lee",
+      "email": "sarah.lee@example.com",
+      "bankAccount": {
+        "accountNumber": "9999999999",
+        "routingNumber": "888000032",
+        "accountType": "Savings",
+        "balance": 3000.00,
+        "transactions": [
+          {
+            "date": "2024-07-03",
+            "amount": -75.00,
+            "type": "debit",
+            "description": "Dinner"
+          },
+          {
+            "date": "2024-07-08",
+            "amount": 600.00,
+            "type": "credit",
+            "description": "Side Job Payment"
+          },
+          {
+            "date": "2024-07-14",
+            "amount": -125.00,
+            "type": "debit",
+            "description": "Pet Supplies"
+          }
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "David Kim",
+      "email": "david.kim@example.com",
+      "bankAccount": {
+        "accountNumber": "1010101010",
+        "routingNumber": "999000033",
+        "accountType": "Checking",
+        "balance": 4000.00,
+        "transactions": [
+          {
+            "date": "2024-07-04",
+            "amount": -100.00,
+            "type": "debit",
+            "description": "Car Payment"
+          },
+          {
+            "date": "2024-07-09",
+            "amount": 800.00,
+            "type": "credit",
+            "description": "Bonus"
+          },
+          {
+            "date": "2024-07-13",
+            "amount": -200.00,
+            "type": "debit",
+            "description": "Electricity Bill"
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "Lisa Nguyen",
+      "email": "lisa.nguyen@example.com",
+      "bankAccount": {
+        "accountNumber": "1212121212",
+        "routingNumber": "101000034",
+        "accountType": "Savings",
+        "balance": 6000.00,
+        "transactions": [
+          {
+            "date": "2024-07-01",
+            "amount": -150.00,
+            "type": "debit",
+            "description": "Fitness Membership"
+          },
+          {
+            "date": "2024-07-05",
+            "amount": 500.00,
+            "type": "credit",
+            "description": "Freelance Payment"
+          },
+          {
+            "date": "2024-07-12",
+            "amount": -80.00,
+            "type": "debit",
+            "description": "Online Subscription"
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "Tom Harris",
+      "email": "tom.harris@example.com",
+      "bankAccount": {
+        "accountNumber": "1313131313",
+        "routingNumber": "121000035",
+        "accountType": "Checking",
+        "balance": 8000.00,
+        "transactions": [
+          {
+            "date": "2024-07-02",
+            "amount": -200.00,
+            "type": "debit",
+            "description": "Travel"
+          },
+          {
+            "date": "2024-07-08",
+            "amount": 1000.00,
+            "type": "credit",
+            "description": "Investment Return"
+          },
+          {
+            "date": "2024-07-14",
+            "amount": -500.00,
+            "type": "debit",
+            "description": "Home Repairs"
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "Rachel Patel",
+      "email": "rachel.patel@example.com",
+      "bankAccount": {
+        "accountNumber": "1414141414",
+        "routingNumber": "131000036",
+        "accountType": "Savings",
+        "balance": 9000.00,
+        "transactions": [
+          {
+            "date": "2024-07-01",
+            "amount": -250.00,
+            "type": "debit",
+            "description": "Furniture"
+          },
+          {
+            "date": "2024-07-06",
+            "amount": 1200.00,
+            "type": "credit",
+            "description": "Side Job Income"
+          },
+          {
+            "date": "2024-07-13",
+            "amount": -300.00,
+            "type": "debit",
+            "description": "Vacation"
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "Chris Martin",
+      "email": "chris.martin@example.com",
+      "bankAccount": {
+        "accountNumber": "1515151515",
+        "routingNumber": "141000037",
+        "accountType": "Checking",
+        "balance": 10000.00,
+        "transactions": [
+          {
+            "date": "2024-07-03",
+            "amount": -400.00,
+            "type": "debit",
+            "description": "Car Maintenance"
+          },
+          {
+            "date": "2024-07-08",
+            "amount": 1500.00,
+            "type": "credit",
+            "description": "Project Payment"
+          },
+          {
+            "date": "2024-07-15",
+            "amount": -600.00,
+            "type": "debit",
+            "description": "Home Renovation"
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name": "Jessica Garcia",
+      "email": "jessica.garcia@example.com",
+      "bankAccount": {
+        "accountNumber": "1616161616",
+        "routingNumber": "151000038",
+        "accountType": "Savings",
+        "balance": 11000.00,
+        "transactions": [
+          {
+            "date": "2024-07-02",
+            "amount": -300.00,
+            "type": "debit",
+            "description": "New Computer"
+          },
+          {
+            "date": "2024-07-07",
+            "amount": 2000.00,
+            "type": "credit",
+            "description": "Stock Dividend"
+          },
+          {
+            "date": "2024-07-14",
+            "amount": -700.00,
+            "type": "debit",
+            "description": "Vacation"
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name": "Michael Rodriguez",
+      "email": "michael.rodriguez@example.com",
+      "bankAccount": {
+        "accountNumber": "1717171717",
+        "routingNumber": "161000039",
+        "accountType": "Checking",
+        "balance": 12000.00,
+        "transactions": [
+          {
+            "date": "2024-07-01",
+            "amount": -500.00,
+            "type": "debit",
+            "description": "Rent"
+          },
+          {
+            "date": "2024-07-05",
+            "amount": 2000.00,
+            "type": "credit",
+            "description": "Bonus"
+          },
+          {
+            "date": "2024-07-12",
+            "amount": -400.00,
+            "type": "debit",
+            "description": "Utilities"
+          }
+        ]
+      }
+    }
+  ]
+}

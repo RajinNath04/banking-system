@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import "../assets/Registration.css";
@@ -26,50 +26,74 @@ const Registration = () => {
   };
 
   return (
-    <div className="login-section">
-      <div className="login-container">
+    <div className="reg-section">
+      <div className="reg-container">
         <h2>Registration Details</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="input-container">
-            <label>First Name</label>
-            <input {...register("fname", { required: true })} />
-            {errors.fname && <span>This field is required</span>}
+          <div className="input-wrapper">
+            <div className="reg-input-container">
+              <label>First Name</label>
+              <input {...register("fname", { required: true })} />
+              {errors.fname && <span>This field is required</span>}
+            </div>
+            <div className="reg-input-container input-style">
+              <label>Last Name</label>
+              <input {...register("lname", { required: true })} />
+              {errors.lname && <span>This field is required</span>}
+            </div>
           </div>
-          <div className="input-container">
-            <label>Last Name</label>
-            <input {...register("lname", { required: true })} />
-            {errors.lname && <span>This field is required</span>}
+          <div className="input-wrapper">
+            <div className="reg-input-container">
+              <label>Email</label>
+              <input
+                {...register("email", {
+                  required: true,
+                  pattern: /^\S+@\S+$/i,
+                })}
+              />
+              {errors.email && <span>Invalid email address</span>}
+            </div>
+            <div className="reg-input-container input-style">
+              <label htmlFor="phoneNumber">Phone Number</label>
+              <input
+                id="phoneNumber"
+                type="tel"
+                {...register("phoneNumber", {
+                  required: "Phone number is required",
+                  pattern: {
+                    value: /^[0-9]{10,15}$/,
+                    message: "Invalid phone number",
+                  },
+                })}
+              />
+              {errors.phoneNumber && <span>Invalid Phone Number</span>}
+            </div>
           </div>
-          <div className="input-container">
-            <label>Email</label>
-            <input
-              {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-            />
-            {errors.email && <span>Invalid email address</span>}
-          </div>
-          <div className="input-container">
-            <label>Password</label>
-            <input
-              type="password"
-              {...register("password", { required: true, minLength: 6 })}
-            />
-            {errors.password && (
-              <span>Password must be at least 6 characters long</span>
-            )}
-          </div>
-          <div className="input-container">
-            <label>Confirm Password</label>
-            <input
-              type="password"
-              {...register("confirmPassword", {
-                required: true,
-                validate: (value) =>
-                  value === password || "Passwords do not match",
-              })}
-            />
-            {errors.confirmPassword && (
-              <span>{errors.confirmPassword.message}</span>
-            )}
+          <div className="input-wrapper">
+            <div className="reg-input-container">
+              <label>Password</label>
+              <input
+                type="password"
+                {...register("password", { required: true, minLength: 6 })}
+              />
+              {errors.password && (
+                <span>Password must be at least 6 characters long</span>
+              )}
+            </div>
+            <div className="reg-input-container input-style">
+              <label>Confirm Password</label>
+              <input
+                type="password"
+                {...register("confirmPassword", {
+                  required: true,
+                  validate: (value) =>
+                    value === password || "Passwords do not match",
+                })}
+              />
+              {errors.confirmPassword && (
+                <span>{errors.confirmPassword.message}</span>
+              )}
+            </div>
           </div>
           <button type="submit">Register</button>
           <hr

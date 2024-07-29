@@ -1,61 +1,63 @@
 /* App.css */
-.login-section {
+.reg-section {
     display: flex;
     justify-content: center;
     align-items: center;
     height: inherit;
 }
 
-.login-container {
+.reg-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 50%;
     text-align: center;
 }
 
-.login-container h2 {
+.reg-container h2 {
     margin-bottom: 20px;
     color: #333;
 }
 
-.password-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-.input-container {
+.reg-input-container {
     margin-bottom: 15px;
     text-align: left;
 }
 
-.input-container label {
+.reg-input-container label {
     display: block;
     margin-bottom: 5px;
     color: #333;
 }
 
-.input-container input {
-    width: 100%;
+.reg-input-container input {
+    width: 350px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-.input-container input:focus {
+.reg-input-container input:focus {
     border-color: #0056b3;
     outline: none;
 }
+
+.input-wrapper {
+    display: flex;
+}
+
+.input-style {
+    margin-left: 10px;
+}
   
-  span {
+span {
     color: red;
     font-size: 12px;
-  }
+}
 
-  button {
+button {
     width: 100%;
     padding: 10px;
     background-color: #0056b3;

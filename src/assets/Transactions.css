@@ -1,0 +1,7 @@
+.transaction-container {
+    border: 1px solid lightgray;
+}
+
+.transaction-account-number {
+    text-align: center;
+}
