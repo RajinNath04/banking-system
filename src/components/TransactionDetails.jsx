@@ -78,7 +78,7 @@ const TransactionDetails = ({ header }) => {
               onChange={(e) => setAccountNumber(e.target.value)}
               placeholder="Enter Account Number"
             />
-            {errors.accountNumber && <span>{errors.accountNumber}</span>}
+            {errors.accountNumber && <span className="error-fields">{errors.accountNumber}</span>}
           </div>
           <div className="transaction-input mr-2">
             <input
@@ -88,7 +88,7 @@ const TransactionDetails = ({ header }) => {
               onChange={(e) => setAmout(e.target.value)}
               placeholder="Enter Amount"
             />
-            {errors.amount && <span>{errors.amount}</span>}
+            {errors.amount && <span className="error-fields">{errors.amount}</span>}
           </div>
           {header === "Multi currency transfer" && (
             <div>
@@ -108,7 +108,7 @@ const TransactionDetails = ({ header }) => {
                   </option>
                 ))}
               </select>
-              {errors.currencyType && <span>{errors.currencyType}</span>}
+              {errors.currencyType && <span className="error-fields">{errors.currencyType}</span>}
             </div>
           )}
         </div>

@@ -4,11 +4,10 @@ import UsersData from "../data/Users.json";
 import "../assets/Users.css";
 import TransactionHistory from "./TransactionHistory";
 
-const Users = () => {
+const Users = ({ setData, data }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [filterSearch, setFilterSearch] = useState("");
   const [filterValue, setFilterValue] = useState("");
-  const [data, setData] = useState(UsersData.users);
   const [isTransactionEnabled, setIsTransactionEnabled] = useState(false);
   const [transactionData, setTransationData] = useState([]);
 

@@ -79,7 +79,7 @@ const Home = () => {
         {tab === "Account" && (
           <Account setData={setData} data={data} setTab={setTab} />
         )}
-        {tab === "Users" && <Users />}
+        {tab === "Users" && <Users setData={setData} data={data} />}
         {tab === "Transaction" && <Transactions />}
       </div>
     </div>

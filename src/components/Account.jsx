@@ -20,17 +20,35 @@ const Account = ({ setData, data, setTab }) => {
     const errors = validateForm();
     if (Object.keys(errors).length === 0) {
       const newUser = {
-        firstName,
-        lastName,
-        dateOfBirth,
-        phone,
-        email,
-        address,
-        city,
-        pin,
-        accountNumber: generateAccountNumber(),
-        balance,
-        isActive: true,
+        id: Math.floor(Math.random() * 100),
+        name: firstName + " " + midName + " " + lastName,
+        email: email,
+        bankAccount: {
+          accountNumber: generateAccountNumber(),
+          routingNumber: "111000025",
+          accountType: "Checking",
+          balance: balance,
+          transactions: [
+            {
+              date: "2024-07-01",
+              amount: -50.0,
+              type: "debit",
+              description: "Grocery Store",
+            },
+            {
+              date: "2024-07-05",
+              amount: 200.0,
+              type: "credit",
+              description: "Salary",
+            },
+            {
+              date: "2024-07-10",
+              amount: -30.0,
+              type: "debit",
+              description: "Restaurant",
+            },
+          ],
+        },
       };
       setUsers([...users, newUser]);
       setData([...data, newUser]);
@@ -114,7 +132,9 @@ const Account = ({ setData, data, setTab }) => {
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
-              {errors.firstName && <span>{errors.firstName}</span>}
+              {errors.firstName && (
+                <span className="error-fields">{errors.firstName}</span>
+              )}
             </div>
             <div className="acc-input-container acc-input-style">
               <label>Middle Name:</label>
@@ -131,7 +151,9 @@ const Account = ({ setData, data, setTab }) => {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
-              {errors.lastName && <span>{errors.lastName}</span>}
+              {errors.lastName && (
+                <span className="error-fields">{errors.lastName}</span>
+              )}
             </div>
           </div>
           <div className="acc-input-wrapper">
@@ -142,7 +164,9 @@ const Account = ({ setData, data, setTab }) => {
                 value={dateOfBirth}
                 onChange={(e) => setDateOfBirth(e.target.value)}
               />
-              {errors.dateOfBirth && <span>{errors.dateOfBirth}</span>}
+              {errors.dateOfBirth && (
+                <span className="error-fields">{errors.dateOfBirth}</span>
+              )}
             </div>
             <div className="acc-input-container acc-input-style">
               <label>Email</label>
@@ -151,7 +175,9 @@ const Account = ({ setData, data, setTab }) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {errors.email && <span>{errors.email}</span>}
+              {errors.email && (
+                <span className="error-fields">{errors.email}</span>
+              )}
             </div>
             <div className="acc-input-container acc-input-style">
               <label>Phone Number</label>
@@ -160,7 +186,9 @@ const Account = ({ setData, data, setTab }) => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              {errors.phone && <span>{errors.phone}</span>}
+              {errors.phone && (
+                <span className="error-fields">{errors.phone}</span>
+              )}
             </div>
           </div>
           <div className="acc-input-wrapper">
@@ -171,7 +199,9 @@ const Account = ({ setData, data, setTab }) => {
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
               />
-              {errors.address && <span>{errors.address}</span>}
+              {errors.address && (
+                <span className="error-fields">{errors.address}</span>
+              )}
             </div>
             <div className="acc-input-container acc-input-style">
               <label>City</label>
@@ -180,7 +210,9 @@ const Account = ({ setData, data, setTab }) => {
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
               />
-              {errors.city && <span>{errors.city}</span>}
+              {errors.city && (
+                <span className="error-fields">{errors.city}</span>
+              )}
             </div>
             <div className="acc-input-container acc-input-style">
               <label>Pin Code</label>
@@ -189,25 +221,13 @@ const Account = ({ setData, data, setTab }) => {
                 value={pin}
                 onChange={(e) => setPin(e.target.value)}
               />
-              {errors.pin && <span>{errors.pin}</span>}
+              {errors.pin && <span className="error-fields">{errors.pin}</span>}
             </div>
           </div>
           <button className="acc-button" type="submit">
             Create Account
           </button>
         </form>
-        {/* <h2>Users</h2>
-        <ul>
-          {users.map((user, index) => (
-            <li key={index}>
-              <p>
-                {user.firstName} {user.lastName}
-              </p>
-              <p>Account Number: {user.accountNumber}</p>
-              <p>Balance: {user.balance}</p>
-            </li>
-          ))}
-        </ul> */}
       </div>
     </div>
   );
