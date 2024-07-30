@@ -105,10 +105,9 @@ const Users = ({ setData, data }) => {
             </div>
           </div>
           <h4>Total Accounts: {data.length}</h4>
-          <Table striped bordered hover>
+          <Table striped bordered hover responsive>
             <thead>
               <tr>
-                <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Account Number</th>
@@ -119,7 +118,6 @@ const Users = ({ setData, data }) => {
             <tbody>
               {currentItems.map((item) => (
                 <tr key={item.id}>
-                  <td>{item.id}</td>
                   <td>{item.name}</td>
                   <td>{item.email}</td>
                   <td>{item.bankAccount.accountNumber}</td>
