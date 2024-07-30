@@ -21,7 +21,6 @@ const Registration = () => {
         password: data.password,
       })
     );
-    console.log(JSON.parse(localStorage.getItem(data)));
     navigate("/", { replace: true });
   };
 

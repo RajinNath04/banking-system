@@ -1,61 +1,64 @@
-.login-section {
+.acc-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: inherit;
+    height: 100%;
 }
 
-.login-container {
+.acc-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
     text-align: center;
 }
 
-.login-container h2 {
+.acc-container h2 {
     margin-bottom: 20px;
     color: #333;
 }
 
-.password-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-.input-container {
+.acc-input-container {
     margin-bottom: 15px;
     text-align: left;
 }
 
-.input-container label {
+.acc-input-container label {
     display: block;
     margin-bottom: 5px;
     color: #333;
 }
 
-.input-container input {
-    width: 100%;
+.acc-input-container input {
+    width: 450px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-.input-container input:focus {
+.acc-input-container input:focus {
     border-color: #0056b3;
     outline: none;
 }
   
-  span {
+span {
     color: red;
-    font-size: 12px;
-  }
+    font-size: 20px;
+    margin-left: 40px;
+}
 
-  button {
-    width: 100%;
+.acc-input-wrapper {
+    display: flex;
+}
+
+.acc-input-style {
+    margin-left: 10px;
+}
+  
+
+.acc-button {
+    width: 30%;
     padding: 10px;
     background-color: #0056b3;
     border: none;
@@ -63,8 +66,9 @@
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
-button:hover {
+.acc-button:hover {
     background-color: #004494;
 }

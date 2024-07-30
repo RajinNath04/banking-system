@@ -4,10 +4,12 @@ import "../assets/Home.css";
 import Account from "../components/Account";
 import Users from "../components/Users";
 import Transactions from "../components/Transactions";
+import UsersList from "../data/Users.json";
 
 const Home = () => {
   const [tab, setTab] = useState("Account");
   const [tabActive, setTabActive] = useState(0);
+  const [data, setData] = useState(UsersList.users);
   const navigate = useNavigate();
 
   const tabList = [
@@ -69,7 +71,9 @@ const Home = () => {
         </div>
       </nav>
       <div className="content">
-        {tab === "Account" && <Account />}
+        {tab === "Account" && (
+          <Account setData={setData} data={data} setTab={setTab} />
+        )}
         {tab === "Users" && <Users />}
         {tab === "Transaction" && <Transactions />}
       </div>

@@ -51,9 +51,6 @@ const Users = () => {
     setTransationData(transactions);
   };
 
-  console.log(transactionData);
-  console.log(isTransactionEnabled);
-
   return (
     <div>
       {transactionData.length > 0 && isTransactionEnabled ? (
