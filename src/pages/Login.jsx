@@ -17,7 +17,7 @@ const Login = () => {
 
   useEffect(() => {
     if (location.pathname === "/") localStorage.clear();
-  }, []);
+  }, [location.pathname]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
