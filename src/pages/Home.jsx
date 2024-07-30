@@ -9,6 +9,7 @@ import UsersList from "../data/Users.json";
 const Home = () => {
   const [tab, setTab] = useState("Account");
   const [tabActive, setTabActive] = useState(0);
+  const [mobileView, setMobileView] = useState(false);
   const [data, setData] = useState(UsersList.users);
   const navigate = useNavigate();
 
@@ -49,10 +50,14 @@ const Home = () => {
           aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => setMobileView(!mobileView)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div
+          className={`${!mobileView && "collapse"} navbar-collapse`}
+          id="navbarNavAltMarkup"
+        >
           <div className="navbar-nav">
             {tabList.map((item, index) => {
               return (
