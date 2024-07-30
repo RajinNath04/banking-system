@@ -6,9 +6,6 @@ body {
     height: 100vh;
 }
 
-html {
-  width: fit-content;
-}
 #root, .app-container {
   height: 100vh;
 }
