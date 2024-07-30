@@ -78,19 +78,13 @@ const Login = () => {
               </span>
             </div>
           </div>
-          <button type="submit">Login</button>
+          <button className="btn btn-success" type="submit">
+            Login
+          </button>
           {error && <p style={{ color: "red" }}>{error}</p>}
           {isLoggedIn && <p>Welcome, {email}!</p>}
         </form>
-        <hr
-          style={{
-            height: "2px",
-            borderWidth: "0",
-            color: "gray",
-            backgroundColor: "gray",
-            marginTop: "20px",
-          }}
-        ></hr>
+        <hr />
         <button type="button" onClick={handleRegister}>
           Register
         </button>

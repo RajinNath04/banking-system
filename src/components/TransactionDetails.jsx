@@ -15,7 +15,7 @@ const TransactionDetails = ({ header }) => {
 
     if (Object.keys(errors).length === 0) {
       if (fundTransfer && header === "Fund Transfer") {
-        alert(`Fund transfered to ${accountNumber} `);
+        alert(`Fund transfered to Account Number: ${accountNumber} `);
         setAccountNumber("");
         setAmout("");
         setErrors({});
@@ -24,7 +24,7 @@ const TransactionDetails = ({ header }) => {
         multiTransfer &&
         header === "Multi currency transfer"
       ) {
-        alert(`Multi currency transfered to ${accountNumber} `);
+        alert(`Multi currency transfered to Account Number: ${accountNumber} `);
         setAccountNumber("");
         setAmout("");
         setCurrencyType("");

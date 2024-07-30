@@ -30,7 +30,7 @@
 }
 
 .acc-input-container input {
-    width: 450px;
+    width: 250px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -50,6 +50,7 @@
 
 .acc-input-wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .acc-input-style {

@@ -33,12 +33,16 @@ const Registration = () => {
             <div className="reg-input-container">
               <label>First Name</label>
               <input {...register("fname", { required: true })} />
-              {errors.fname && <span className="error-fields">This field is required</span>}
+              {errors.fname && (
+                <span className="error-fields">This field is required</span>
+              )}
             </div>
             <div className="reg-input-container input-style">
               <label>Last Name</label>
               <input {...register("lname", { required: true })} />
-              {errors.lname && <span className="error-fields">This field is required</span>}
+              {errors.lname && (
+                <span className="error-fields">This field is required</span>
+              )}
             </div>
           </div>
           <div className="input-wrapper">
@@ -50,7 +54,9 @@ const Registration = () => {
                   pattern: /^\S+@\S+$/i,
                 })}
               />
-              {errors.email && <span className="error-fields">Invalid email address</span>}
+              {errors.email && (
+                <span className="error-fields">Invalid email address</span>
+              )}
             </div>
             <div className="reg-input-container input-style">
               <label htmlFor="phoneNumber">Phone Number</label>
@@ -65,7 +71,9 @@ const Registration = () => {
                   },
                 })}
               />
-              {errors.phoneNumber && <span className="error-fields">Invalid Phone Number</span>}
+              {errors.phoneNumber && (
+                <span className="error-fields">Invalid Phone Number</span>
+              )}
             </div>
           </div>
           <div className="input-wrapper">
@@ -76,7 +84,9 @@ const Registration = () => {
                 {...register("password", { required: true, minLength: 6 })}
               />
               {errors.password && (
-                <span className="error-fields">Password must be at least 6 characters long</span>
+                <span className="error-fields">
+                  Password must be at least 6 characters long
+                </span>
               )}
             </div>
             <div className="reg-input-container input-style">
@@ -90,21 +100,18 @@ const Registration = () => {
                 })}
               />
               {errors.confirmPassword && (
-                <span className="error-fields">{errors.confirmPassword.message}</span>
+                <span className="error-fields">
+                  {errors.confirmPassword.message}
+                </span>
               )}
             </div>
           </div>
-          <button type="submit">Register</button>
-          <hr
-            style={{
-              height: "2px",
-              borderWidth: "0",
-              color: "gray",
-              backgroundColor: "gray",
-              marginTop: "20px",
-            }}
-          ></hr>
+          <button className="register-button" type="submit">
+            Register
+          </button>
+          <hr />
           <button
+            className="register-button btn btn-success"
             type="submit"
             onClick={() => navigate("/", { replace: true })}
           >
